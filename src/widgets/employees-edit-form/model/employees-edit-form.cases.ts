@@ -9,7 +9,7 @@ import dayjs, { Dayjs } from 'dayjs';
 import { SelectChangeEvent } from '@mui/material/Select';
 
 export const useEmployeesEditFormCases = () => {
-  const [employee, setEmployee] = React.useState<Employee>();
+  const [employee, setEmployee] = React.useState<Employee | null>(null);
 
   const employeesData = useAppSelector(selectEmployeesData);
   const dispatch = useAppDispatch();
